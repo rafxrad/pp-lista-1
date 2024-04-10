@@ -1,11 +1,15 @@
+package game;
+
 public class Amazonia implements Location {
+
+	
     @Override 
-    string getName(){
-        return "Amazônia"
+    public String getName(){
+        return "Amazônia";
     }
     
     @Override
-    EnemyFactory createEnemyFactory(){
+    public EnemyFactory createEnemyFactory(){
         return new AmazoniaEnemyFactory();
     }
 }

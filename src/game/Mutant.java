@@ -1,7 +1,13 @@
+package game;
+
+
 public class Mutant implements Enemy {
 
-    @Override
-    void attack(){
-        return "Um animal mutante comeu sua cabeça"
-    }
+	@Override
+	public String attack() {
+		System.out.println("Um mutante comeu sua cabeça");
+		return null;
+	}
+
+    
 }

@@ -1,7 +1,9 @@
+package game;
+
 public class AmazoniaEnemyFactory implements EnemyFactory {
 
     @Override
-    Enemy buildEnemy(){
+    public Enemy buildEnemy(){
         return new Mutant();
     }
 }

@@ -1,3 +1,7 @@
+package game;
+
 public interface Enemy {
-    void attack();
+
+	public String attack();
+	
 }

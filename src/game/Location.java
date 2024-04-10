@@ -1,4 +1,7 @@
+package game;
+
 public interface Location {
-    string getName();
-    EnemyFactory createEnemyFactory();
+	
+    public String getName();
+    public EnemyFactory createEnemyFactory();
 }

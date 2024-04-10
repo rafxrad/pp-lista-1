@@ -1,11 +1,14 @@
+package game;
+
+
 public class RioDeJaneiro implements Location {
     @Override 
-    string getName(){
-        return "Rio de Janeiro"
+    public String getName(){
+        return "Rio de Janeiro";
     }
     
     @Override
-    EnemyFactory createEnemyFactory(){
+    public EnemyFactory createEnemyFactory(){
         return new RioEnemyFactory();
     }
 }

@@ -1,7 +1,11 @@
+package game;
+
+
 public class Criminoso implements Enemy {
 
     @Override
-    void attack(){
-        return "Criminoso levou seu Iphone!"
+    public String attack(){
+        System.out.println("Um criminoso levou seu Iphone!");
+        return null;
     }
 }

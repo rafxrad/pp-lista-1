@@ -1,7 +1,10 @@
+package game;
+
+
 public class RioEnemyFactory implements EnemyFactory {
 
     @Override
-    Enemy buildEnemy(){
+    public Enemy buildEnemy(){
         return new Criminoso();
     }
 }
