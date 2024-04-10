@@ -7,10 +7,13 @@ public class Main {
 		
 		
 		Location rio = new RioDeJaneiro();
+		Location amazonia = new Amazonia();
 		
 		Game mygame1 = new Game(rio);
+		Game mygame2 = new Game(amazonia);
 		
 		mygame1.play();
+		mygame2.play();
 		
 		
 

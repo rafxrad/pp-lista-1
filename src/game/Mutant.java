@@ -12,7 +12,7 @@ public class Mutant implements Enemy {
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Animal mutante";
 	}
 
     
