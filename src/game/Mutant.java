@@ -9,5 +9,11 @@ public class Mutant implements Enemy {
 		return null;
 	}
 
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
     
 }

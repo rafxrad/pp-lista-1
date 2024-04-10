@@ -11,4 +11,6 @@ public class RioDeJaneiro implements Location {
     public EnemyFactory createEnemyFactory(){
         return new RioEnemyFactory();
     }
+    
+    
 }
