@@ -13,17 +13,20 @@ public class TremForca implements Component{
 		arvorePecas.add(new Peca("transmissão", 40));
 		arvorePecas.add(new Peca("diferencial", 60));
 		arvorePecas.add(new Peca("rodas", 70));
-	
 		
 	}
 	
 
 	@Override
 	public void info() {
+		double PESO_PARCIAL = 0;
 		// TODO Auto-generated method stub
 		for (Component peca: arvorePecas) {
-			System.out.println("Adicionando peça " + peca.getName());
+			PESO_PARCIAL += peca.calcularPeso();
+			peca.info();
+			System.out.print("O peso parcial é: " + PESO_PARCIAL);
 		}
+
 	}
 
 	@Override
@@ -39,19 +42,6 @@ public class TremForca implements Component{
 	}
 
 
-	@Override
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	@Override
-	public double getPeso() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 	
 
 }
