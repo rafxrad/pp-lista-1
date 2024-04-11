@@ -7,7 +7,7 @@ import java.util.Random;
  * Mimic the data input ability of a physical phone's keypad;
  * however, here we're just sending it fake digits.
  */
-public class KeyPad {
+public class KeyPad implements Observer {
     private final PhoneModel model;
 
     public KeyPad(PhoneModel model) {
