@@ -1,3 +1,5 @@
+package websearch.websearch;
+
 /**
  * Watches the search queries
  */
