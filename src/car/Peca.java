@@ -25,7 +25,7 @@ public class Peca implements Component {
 	@Override
 	public void calcularPesoParcial(){
 		// TODO Auto-generated method stub
-		System.out.println("Parte: " + name + " Peso: " + peso);
+		System.out.println("Adicionando a parte: " + name + " PESO: " + peso);
 	}
 
 
