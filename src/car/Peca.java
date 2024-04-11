@@ -15,7 +15,7 @@ public class Peca implements Component {
 	
 
 	@Override
-	public double calcularPeso() {
+	public double calcularPesoTotal() {
 		// TODO Auto-generated method stub
 		return peso;
 	}
@@ -23,7 +23,7 @@ public class Peca implements Component {
 
 
 	@Override
-	public void info(){
+	public void calcularPesoParcial(){
 		// TODO Auto-generated method stub
 		System.out.println("Parte: " + name + " Peso: " + peso);
 	}
