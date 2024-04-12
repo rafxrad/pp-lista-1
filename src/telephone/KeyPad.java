@@ -7,7 +7,7 @@ import java.util.Random;
  * Mimic the data input ability of a physical phone's keypad;
  * however, here we're just sending it fake digits.
  */
-public class KeyPad implements Observer {
+public class KeyPad implements Observable{
     private final PhoneModel model;
 
     public KeyPad(PhoneModel model) {
@@ -21,7 +21,15 @@ public class KeyPad implements Observer {
             int newDigit = rnd.nextInt(MAX_DIGIT);
             System.out.println("Pressing: " + newDigit);
             model.addDigit(newDigit);
+
         }
     }
+
+	@Override
+	public void notifyObserver(Observer o) {
+		o.notify();
+		
+	}
+
 
 }

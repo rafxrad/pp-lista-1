@@ -25,12 +25,8 @@ public class Screen {
     	observers.add(event);
     }
     
-    public void notifyObserver() {
-    	
-    	for (Observer: observers) do {
-    		observer.notifyScreen();
-    		
-    	}
-    	
+   
+    public void notify(Observer observer) {
+    	observer.notify();
     }
 }
