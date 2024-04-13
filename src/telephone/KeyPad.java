@@ -13,6 +13,7 @@ public class KeyPad implements Observable{
     private final PhoneModel model;
     public List<Observer> observers = new ArrayList<>();
 
+
     public KeyPad(PhoneModel model) {
         this.model = model;
         this.observers = new ArrayList<>();
@@ -25,16 +26,28 @@ public class KeyPad implements Observable{
             int newDigit = rnd.nextInt(MAX_DIGIT);
             System.out.println("Pressionando: " + newDigit);
             model.addDigit(newDigit);
+            notifyObserverNewDigit();
         }
- 
+        notifyObserverDialing();
     }
     
 
 	@Override
-	public void notifyObserver(Observer o) {
-		o.notify();
+	public void notifyObserverNewDigit() {
+		for (Observer observer : observers) {
+			observer.updateNewDigit();;
+		}
 		
 	}
+	
+	@Override
+	public void notifyObserverDialing() {
+		for (Observer observer : observers) {
+			observer.updateDialing();
+		}
+		
+	}
+	
 
 	@Override
 	public void addObserver(Observer o) {
@@ -49,6 +62,8 @@ public class KeyPad implements Observable{
 		observers.remove(o);
 		
 	}
+	
+	
 
 
 

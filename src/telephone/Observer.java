@@ -2,6 +2,7 @@ package telephone;
 
 public interface Observer {
 	
-	public void update();
+	public void updateNewDigit();
+	public void updateDialing();
 
 }

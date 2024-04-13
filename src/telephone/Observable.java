@@ -2,7 +2,8 @@ package telephone;
 
 public interface Observable {
 
-	void addObserver(Observer o);
-	void removeObserver(Observer o);
-	void notifyObserver(Observer o);
+	public void addObserver(Observer o);
+	public void removeObserver(Observer o);
+	public void notifyObserverNewDigit();
+	public void notifyObserverDialing();
 }
