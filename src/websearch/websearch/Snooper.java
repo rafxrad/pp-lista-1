@@ -4,6 +4,7 @@ package websearch.websearch;
  * Watches the search queries
  */
 public class Snooper {
+	
     private final WebSearchModel model;
 
     public Snooper(WebSearchModel model) {
@@ -15,7 +16,11 @@ public class Snooper {
         	
             @Override
             public void onQuery(String query) {
+            	if(strategy.hasInterest(query)) {
                 System.out.println("Oh yes! " + query);
+            	
+            	} 
+            
             }
 
 			@Override
@@ -32,7 +37,9 @@ public class Snooper {
         	
             @Override
             public void onQuery(String query) {
+            	if(strategy.hasInterest(query)) {
                 System.out.println("So long... " + query);
+            	}
             }
 
 			@Override

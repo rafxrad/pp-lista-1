@@ -44,5 +44,9 @@ public class WebSearchModel {
             obs.onQuery(line);
         }
     }
+    
+    public List<QueryObserver> getObserverss(){
+    	return observers;
+    }
    
 }
