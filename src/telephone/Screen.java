@@ -1,8 +1,5 @@
 package telephone;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Prints things out to the screen, when needed
  * Printing to the screen:
