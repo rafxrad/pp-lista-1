@@ -8,7 +8,7 @@ import java.io.File;
 public class Main {
     public static void main(String[] args) {
         // Source file (in the project's data/ folder)
-        File inputTextFile = new File("hamlet.txt");
+        File inputTextFile = new File("/Users/rcosta/Documents/Java/src/websearch/Hamlet.txt");
       
 
         // Build object graph
