@@ -18,7 +18,7 @@ public class PhoneModel {
     }
     
     public Integer getLastDigit() {
-    	return digits.size()-1;
+    	return digits.get(digits.size()-1);
     	
     }
     
