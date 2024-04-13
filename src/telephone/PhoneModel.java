@@ -16,4 +16,19 @@ public class PhoneModel {
     public List<Integer> getDigits() {
         return digits;
     }
+    
+    public Integer getLastDigit() {
+    	return digits.size()-1;
+    	
+    }
+    
+    
+    public String getAllDigits() {
+    	String allDigits = "";
+    	for (Integer digit: digits) {
+    		allDigits += digit;
+    	}
+    	return allDigits;
+    }
+    
 }

@@ -1,6 +1,8 @@
 package telephone;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -9,9 +11,11 @@ import java.util.Random;
  */
 public class KeyPad implements Observable{
     private final PhoneModel model;
+    public List<Observer> observers = new ArrayList<>();
 
     public KeyPad(PhoneModel model) {
         this.model = model;
+        this.observers = new ArrayList<>();
     }
 
     public void simulateKeyPresses(int numKeyPresses) {
@@ -19,17 +23,33 @@ public class KeyPad implements Observable{
         Random rnd = new Random();
         for (int i = 0; i < numKeyPresses; i++) {
             int newDigit = rnd.nextInt(MAX_DIGIT);
-            System.out.println("Pressing: " + newDigit);
+            System.out.println("Pressionando: " + newDigit);
             model.addDigit(newDigit);
-
         }
+ 
     }
+    
 
 	@Override
 	public void notifyObserver(Observer o) {
 		o.notify();
 		
 	}
+
+	@Override
+	public void addObserver(Observer o) {
+		observers.add(o);
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeObserver(Observer o) {
+		// TODO Auto-generated method stub
+		observers.remove(o);
+		
+	}
+
 
 
 }
