@@ -10,10 +10,38 @@ public class Snooper {
         this.model = model;
 
         model.addQueryObserver( new WebSearchModel.QueryObserver() {
+        	
+        	FilterStrategy strategy = new StringFilterStrategy("friend");
+        	
             @Override
             public void onQuery(String query) {
-                System.out.println("Query: " + query);
+                System.out.println("Oh yes! " + query);
             }
+
+			@Override
+			public void chooseStrategy(FilterStrategy strategy) {
+				// TODO Auto-generated method stub
+				this.strategy = strategy;
+				
+			}
         });
+        
+        model.addQueryObserver( new WebSearchModel.QueryObserver() {
+        	
+        	FilterStrategy strategy = new LengthFilterStrategy(60);
+        	
+            @Override
+            public void onQuery(String query) {
+                System.out.println("So long... " + query);
+            }
+
+			@Override
+			public void chooseStrategy(FilterStrategy strategy) {
+				// TODO Auto-generated method stub
+				this.strategy = strategy;
+				
+			}
+        });
+        
     }
 }

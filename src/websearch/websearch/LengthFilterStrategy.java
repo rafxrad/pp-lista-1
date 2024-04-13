@@ -5,9 +5,7 @@ public class LengthFilterStrategy implements FilterStrategy {
 	private Integer length;
 
 	
-	
 	public LengthFilterStrategy(Integer length) {
-		super();
 		this.length = length;
 	}
 
