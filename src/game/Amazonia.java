@@ -2,10 +2,11 @@ package game;
 
 public class Amazonia implements Location {
 
-	
-    @Override 
+	String name = "Amazônia";
+   
+	@Override 
     public String getName(){
-        return "Amazônia";
+        return this.name;
     }
     
     @Override
